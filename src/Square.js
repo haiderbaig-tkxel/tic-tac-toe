@@ -1,9 +1,7 @@
-import { useState } from "react";
-
-export default function Square({ value, onClick }) {
+export default function Square({ value, isWinning, onClick }) {
   return (
     <button
-      className={`square ${value === "X" ? "square-x" : value === "O" ? "square-o" : ""}`}
+      className={`square ${value === "X" ? "square-x" : value === "O" ? "square-o" : ""} ${isWinning && "square-winning"}`}
       onClick={onClick}
     >
       {value}
